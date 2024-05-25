@@ -1,151 +1,102 @@
 /* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .logo{
-    /* ancho */
-    width: 6w0px;
-    /* alto */
-    height: 50px;
-}
-  /* Basic styles for hero section */
-  .hero {
-    position: relative;
-    height: 100vh;
-  }
-  
-  .hero video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 50%;
-    min-height: 50%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
-  
- 
-  .hero h1,
-  .hero p {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    text-align: center;
-  }
-  .hero-image img {
-    width: 700px; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: auto;
-    margin-top: 150px;
-    margin-left: 200px; /* Ajusta la separación entre la imagen y el texto */
-  }
-  /* Navigation bar styles */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 15px 0;
-    border-radius: 30px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .logo {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .menu {
-    display: flex;
-    align-items: center;
-    text-align: right;
-  }
-  
-  .menu-text {  
-    display: flex;
-    margin-right: 20px;
-  }
-  
-  .menu-text span {
-    color: #fff;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .contact-btn {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #333;
-    text-decoration: none;
-    border-radius: 30px;
-  }
-  
-  .contact-btn:hover {
-    background-color: #ddd;
-  }
-  
-  /* Styles for project grid */
-  .projects {
-    padding-top: 100px; /* Adjust top padding to account for fixed navbar */
-    padding-bottom: 50px;
-    background-color: #f9f9f9;
-  }
-  
-  .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .project {
-    width: 300px;
-    margin-bottom: 30px;
-  }
-  
-  .project img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .project-info {
-    padding: 15px;
-    background-color: #fff;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .social-links {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .social-links li {
-    display: inline;
-    margin: 0 10px;
-  }
+/* Importaciones - fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-  .projects h2,
-  .projects p {
-    position: relative;
-    z-index: 1;
-    text-align: center;
+/* condiciones o estilos iniciales de mi página */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* root -> hace referencia a mi archivo raíz (<!DOCTYPE html>)*/
+:root {
+  /* paleta de colores & Fuentes*/
+  --colorFondo: #2a2a2a;
+  --SegundoColorFondo: #202020;
+  --colorText: #fff;
+  --colorSecundario: #ccc;
+  --colorPrincipal: #76ABAE;
+  --FuenteGrande: 5rem;
+  --Fuente-h2: 3rem;
+  --Fuente-p: 1.1rem;
+}
+
+ /* --> Estilos  de mi body */
+body{
+  background: var(--colorFondo);
+  color: var(--colorText); 
+}
+/* ---> Header estilo y estructura*/
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.8);
+  
+  padding: 22px 15%;
+  border-bottom: 1px solid transparent;
+  transition: all .45s ease;
+}
+/* ---> Color y forma Logo*/
+.logo{
+  color:var(--colorText);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+span{
+  color: var(--colorPrincipal);
+}
+.listaNave{
+  display: flex;
+}
+.listaNave a{
+  color: var(--colorSecundario);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 25px;
+  transition: all .45s ease;
+}
+
+.listaNave a:hover{
+  color: var(--colorPrincipal);
+}
+#menu-icon{
+  font-size: 35px;
+  color: var(--colorText);
+  z-index: 1000;
+  cursor: pointer;
+  margin-left: 25px;
+  display: none;
+}
+section{
+  padding: 160px 15% 120px;
+}
+.inicio{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   }
+.texto-inicio{
+  background-color: rgba(0,0,0,0.8);
+  padding: 15px;
+  border-radius: 15px;
+
+}
