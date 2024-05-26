@@ -26,13 +26,14 @@
   --Fuente-p: 1.1rem;
 }
 
- /* --> Estilos  de mi body */
-body{
+/* --> Estilos  de mi body */
+body {
   background: var(--colorFondo);
-  color: var(--colorText); 
+  color: var(--colorText);
 }
+
 /* ---> Header estilo y estructura*/
-header{
+header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -41,26 +42,30 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.8);
-  
+  background-color: rgba(0, 0, 0, 0.5);
+
   padding: 22px 15%;
   border-bottom: 1px solid transparent;
   transition: all .45s ease;
 }
+
 /* ---> Color y forma Logo*/
-.logo{
-  color:var(--colorText);
+.logo {
+  color: var(--colorText);
   font-size: 35px;
   font-weight: 700;
   letter-spacing: 1px;
 }
-span{
+
+span {
   color: var(--colorPrincipal);
 }
-.listaNave{
+
+.listaNave {
   display: flex;
 }
-.listaNave a{
+
+.listaNave a {
   color: var(--colorSecundario);
   font-size: 17px;
   font-weight: 500;
@@ -68,10 +73,11 @@ span{
   transition: all .45s ease;
 }
 
-.listaNave a:hover{
+.listaNave a:hover {
   color: var(--colorPrincipal);
 }
-#menu-icon{
+
+#menu-icon {
   font-size: 35px;
   color: var(--colorText);
   z-index: 1000;
@@ -79,10 +85,12 @@ span{
   margin-left: 25px;
   display: none;
 }
-section{
+/*Estilo del BANNER inicial*/
+section {
   padding: 160px 15% 120px;
 }
-.inicio{
+
+.inicio {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -93,10 +101,138 @@ section{
   align-items: center;
   justify-content: flex-start;
 
-  }
-.texto-inicio{
-  background-color: rgba(0,0,0,0.8);
+}
+
+.texto-inicio {
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 15px;
   border-radius: 15px;
+
+}
+
+.slide {
+  margin-bottom: 20px;
+}
+
+.uno {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 0 15px;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: var(--colorPrincipal);
+  color: var(--colorText);
+}
+
+.dos {
+  display: inline-block;
+  color: var(--colorSecundario);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.texto-inicio h1 {
+  font-size: var(--FuenteGrande);
+  font-weight: 700;
+  color: var(--colorText);
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+.texto-inicio h3 {
+  color: var(--colorText);
+  margin: 0 0 35px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.texto-inicio p{
+  color: var(--colorText);
+  font-size: var(--Fuente-p);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+
+.boton {
+  display:flex;
+  align-items:flex-end;
+  justify-content:right;
+}
+
+.btn {
+  display:inline-block;
+  padding: 12px;
+  background: var(--colorPrincipal);
+  border-radius: 10px;
+  color: var(--colorText);
+  font-size: 1rem ;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: all .45s ease;
+}
+.btn:hover{
+  transform: scale(0.9);
+}
+
+/*Diseño contenido portafolio*/
+
+.portafolio-contenido{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+align-items: center;
+gap: 2.5rem;
+margin-top: 5rem;
+}
+.fila{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fila img{
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+}
+.capa{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.1),#00a6ff);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  transition: height 0.5s;
+}
+.capa h5{
+font: 20px;
+font-weight: 600;
+margin-bottom: 15px;
+}
+.capa p{
+  color: var(--colorSecundario);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.capa i{
+  color: var(--colorPrincipal);
+  margin-top: 20px;
+  font-size: 20px;
+  background: var(--colorText);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
 
 }
